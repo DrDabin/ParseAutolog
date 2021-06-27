@@ -1,0 +1,56 @@
+﻿# Prerequisites
+*.d
+*.local
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+#*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+#*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Файл истории
+*.~
+__history/
+__recovery/
+# Разное
+*.#
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.map
+*.tds
+*.rar
+*.7z
+*.zip
+*.bat
+*.txt
+архивы/
+файлы/
+
+# Директория Win32
+Win32/
