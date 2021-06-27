@@ -1,2 +1,2 @@
 # ParseAutologer
-Parser log Autologer.
+Parser Autologer.
