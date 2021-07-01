@@ -64,8 +64,8 @@
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
-        <IncludePath>sqlite\;h\;F:\ParseAVZ\ParserAutologer\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>sqlite\;h\;F:\ParseAVZ\ParserAutologer\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>includeParse\;includeParse\archiv\;include7z\CPP\Windows\;include7z\CPP\Common\;include7z\CPP\7zip\Common\;sqlite\;h\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>includeParse\;includeParse\archiv\;include7z\CPP\Windows\;include7z\CPP\Common\;include7z\CPP\7zip\Common\;sqlite\;h\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <SanitizedProjectName>Parser</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -73,10 +73,10 @@
         <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Manifest_File>img\xpmanifest.manifest</Manifest_File>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsedge;emshosting;FireDACADSDriver;FireDACASADriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;Intraweb;rtl;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -108,12 +108,13 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
         <TASM_Debugging>None</TASM_Debugging>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1049</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
@@ -122,11 +123,115 @@
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <DynamicRTL>false</DynamicRTL>
         <UsePackages>false</UsePackages>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <LinkPackageStatics>rtl.lib;vcl.lib;xmlrtl.lib</LinkPackageStatics>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=© Copyright 2013 - 2020;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <IncludePath>include7z\CPP\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>include7z\CPP\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <Manifest_File>img\xpmanifest.manifest</Manifest_File>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="include7z\CPP\7zip\Common\FileStreams.cpp">
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\7zip\Common\FileStreams.h">
+            <BuildOrder>22</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Common\IntToString.cpp">
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Common\IntToString.h">
+            <BuildOrder>23</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Common\MyString.cpp">
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Common\MyString.h">
+            <BuildOrder>24</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Common\MyVector.cpp">
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Common\MyVector.h">
+            <BuildOrder>25</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Common\NewHandler.cpp">
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Common\NewHandler.h">
+            <BuildOrder>26</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Common\StringConvert.cpp">
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Common\StringConvert.h">
+            <BuildOrder>27</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Common\StringToInt.cpp">
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="include7z\CPP\Common\Wildcard.cpp">
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Common\Wildcard.h">
+            <BuildOrder>29</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Windows\DLL.cpp">
+            <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="include7z\CPP\Windows\FileDir.cpp">
+            <BuildOrder>13</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Windows\FileDir.h">
+            <BuildOrder>30</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Windows\FileFind.cpp">
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Windows\FileFind.h">
+            <BuildOrder>31</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Windows\FileIO.cpp">
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Windows\FileIO.h">
+            <BuildOrder>32</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Windows\FileName.cpp">
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Windows\FileName.h">
+            <BuildOrder>33</BuildOrder>
+        </None>
+        <CppCompile Include="include7z\CPP\Windows\PropVariant.cpp">
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <None Include="include7z\CPP\Windows\PropVariant.h">
+            <BuildOrder>34</BuildOrder>
+        </None>
+        <CppCompile Include="includeParse\archiv\CallbackClassesExtract.cpp">
+            <DependentOn>includeParse\archiv\CallbackClassesExtract.h</DependentOn>
+            <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="includeParse\archiv\CallbackClassesOpen.cpp">
+            <DependentOn>includeParse\archiv\CallbackClassesOpen.h</DependentOn>
+            <BuildOrder>19</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="includeParse\archiv\extract.cpp">
+            <DependentOn>includeParse\archiv\extract.h</DependentOn>
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="includeParse\archiv\PrintFunctions.cpp">
+            <DependentOn>includeParse\archiv\PrintFunctions.h</DependentOn>
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
+        <ResourceCompile Include="includeParse\symple.rc">
+            <Form>symple.res</Form>
+            <BuildOrder>35</BuildOrder>
+        </ResourceCompile>
+        <None Include="includeParse\Version.h">
+            <BuildOrder>34</BuildOrder>
+        </None>
         <CppCompile Include="Parser.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
@@ -136,10 +241,6 @@
             <DependentOn>Parser1.h</DependentOn>
             <BuildOrder>2</BuildOrder>
         </CppCompile>
-        <PCHCompile Include="ParserL.h">
-            <BuildOrder>1</BuildOrder>
-            <PCH>true</PCH>
-        </PCHCompile>
         <None Include="sqlite\sqlite3.h">
             <BuildOrder>4</BuildOrder>
         </None>
@@ -178,6 +279,12 @@
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName=".\Win32\Debug\Parser.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Parser.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32c250mt.dll" Class="DependencyModule">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
@@ -203,8 +310,19 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName=".\Win32\Release\Parser.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Parser.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgstl.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32250.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -215,23 +333,6 @@
                 </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64250mt.dll" Class="DependencyModule">
                     <Platform Name="Win64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName=".\Win32\Debug\Parser.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>Parser.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName=".\Win32\Release\Parser.exe" Configuration="Release" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>Parser.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32250.dll" Class="DependencyModule">
-                    <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

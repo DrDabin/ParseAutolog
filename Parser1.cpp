@@ -476,7 +476,7 @@ UnicodeString __fastcall TForm1::ParseFileNemeDrive(UnicodeString NameFileDrive)
 	//Поиск файла в таблице systemfile
 UnicodeString __fastcall TForm1::AnalizFileName(UnicodeString FileName)
 {
-	int rez = 0;
+	int rez;
 	UnicodeString Rezult = FileName.Trim();
 	if(FileName !="")
 	{

@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'ParserAutologer'
-  ClientHeight = 160
+  ClientHeight = 306
   ClientWidth = 971
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,11 +18,12 @@ object Form1: TForm1
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 116
+    Top = 262
     Width = 971
     Height = 44
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 76
     object Log: TLabel
       Left = 1
       Top = 6
@@ -56,14 +57,15 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 971
-    Height = 68
+    Height = 214
     Align = alClient
     TabOrder = 1
+    ExplicitHeight = 28
     object RichEdit1: TRichEdit
       Left = 1
       Top = 1
       Width = 969
-      Height = 66
+      Height = 212
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
@@ -76,15 +78,17 @@ object Form1: TForm1
       ScrollBars = ssBoth
       TabOrder = 0
       Zoom = 100
+      ExplicitHeight = 52
     end
   end
   object Panel3: TPanel
     Left = 0
-    Top = 68
+    Top = 214
     Width = 971
     Height = 48
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 28
     object Edit1: TEdit
       Left = 1
       Top = 6
